@@ -3823,7 +3823,7 @@ for dirs in os.listdir('.'):
     os.chdir('../')
 
 # Кроки 3/4. Створимо список який буде містити інформацію про нагороди фільмів.
-# Відсортуємо за алфавітом цей список award_name.
+# Відсортуємо за алфавітом цей список за ключем award_name.
 films_awards_list = []
 
 for awards in films_awards:
@@ -3835,6 +3835,8 @@ for awards in films_awards:
     sorted_awards_list = sorted(awards_list, key=award_name)
     temp_dict['awards'] = sorted_awards_list
     films_awards_list.append(temp_dict)
+
+print(f'Крок 4. Выдсортований список: {films_awards_list}')
 
 # Кроки 5/6. Для кожного фільму у теках з літерами від A до Z створимо txt файл з назвою нагороди, яка починаєтья на відповідну літеру.
 # У файл з ім'ям кожної нагороди перенесемо всі назви номінацій цієї нагороди.
