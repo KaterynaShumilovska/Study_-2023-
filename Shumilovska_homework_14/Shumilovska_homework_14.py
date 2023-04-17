@@ -1206,7 +1206,7 @@ films_data = [{'imdb_id': 'tt0120601',
 genres = json.loads(ganres)
 print(genres)
 
-#Крок 2. Для кожного жанру створимо окрему дерикторію.
+#Крок 2. Для кожного жанру створимо окрему дерикторію
 #Крок 3. В кожній директорії створимо CSV файл з колонками: title, year, rating, type, genres
 genres_fieldnames = ['Title', 'Year', 'Rating', 'Type', 'Genres']
 
@@ -1219,7 +1219,7 @@ for genre in genres['results']:
             writer.writerow(genres_fieldnames)
             os.chdir('../')
 
-# Крок 4. Відсортуємо фільми у змінній films_data по жанрам.
+# Крок 4. Відсортуємо фільми у змінній films_data по жанрам
 for titles in films_data:
     for genres_0 in titles['gen']:
         for genres_1 in genres['results']:
